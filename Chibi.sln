@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynesthesiaDev.Chibi.Core", "SynesthesiaDev.Chibi.Core\SynesthesiaDev.Chibi.Core.csproj", "{BF0D0167-F007-426F-BF0F-933E1C84C5E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynesthesiaDev.Chibi.Example", "SynesthesiaDev.Chibi.Example\SynesthesiaDev.Chibi.Example.csproj", "{8E90E835-9D7A-4956-96F2-DA8A65011942}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF0D0167-F007-426F-BF0F-933E1C84C5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0D0167-F007-426F-BF0F-933E1C84C5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0D0167-F007-426F-BF0F-933E1C84C5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0D0167-F007-426F-BF0F-933E1C84C5E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E90E835-9D7A-4956-96F2-DA8A65011942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E90E835-9D7A-4956-96F2-DA8A65011942}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E90E835-9D7A-4956-96F2-DA8A65011942}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E90E835-9D7A-4956-96F2-DA8A65011942}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

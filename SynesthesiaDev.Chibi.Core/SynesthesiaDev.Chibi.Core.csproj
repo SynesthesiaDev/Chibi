@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <Authors>SynesthesiaDev_</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    
+    <PackageId>SynesthesiaDev.Chibi.Core</PackageId>
+    <AssemblyName>SynesthesiaDev.Chibi.Core</AssemblyName>
+    <RootNamespace>SynesthesiaDev.Chibi.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="4.3.2-dev-02433"/>
+    <PackageReference Include="SynesthesiaUtils" Version="2026.614.0"/>
+    <PackageReference Include="Vanara.PInvoke.Shell32" Version="5.0.5"/>
+    <PackageReference Include="Vanara.PInvoke.User32" Version="5.0.5"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="\"/>
+    <None Include="../LICENSE" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+</Project>
