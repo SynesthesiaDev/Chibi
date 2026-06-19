@@ -217,7 +217,7 @@ public class ChibiWindow : IDisposable
             lpfnWndProc = wndProcDelegate,
             hInstance = hInstance,
             hCursor = LoadCursor(HINSTANCE.NULL, IDC_ARROW),
-            hbrBackground = GetStockObject(StockObjectType.WHITE_BRUSH),
+            // hbrBackground = GetStockObject(StockObjectType.WHITE_BRUSH),
             lpszClassName = class_name
         };
 
@@ -367,6 +367,9 @@ public class ChibiWindow : IDisposable
 
         switch (windowMessage)
         {
+            case WindowMessage.WM_ERASEBKGND:
+                return 1;
+
             case WindowMessage.WM_DESTROY:
                 PostQuitMessage();
 
@@ -419,7 +422,9 @@ public class ChibiWindow : IDisposable
                 WindowSize = size;
 
                 OnWindowResized.DispatchEvent(resizeEvent, OnEvent);
-                break;
+                OnFrame?.Invoke();
+
+                return IntPtr.Zero;
 
             case WindowMessage.WM_CLOSE:
                 var exitRequestedEvent = Pooled.WINDOW_EXIT_REQUESTED_EVENT.Rent();
@@ -502,7 +507,9 @@ public class ChibiWindow : IDisposable
                 WindowPosition = windowPos;
 
                 OnWindowMoved.DispatchEvent(moveEvent, OnEvent);
-                break;
+                OnFrame?.Invoke();
+
+                return IntPtr.Zero;
 
             case WindowMessage.WM_ACTIVATE:
                 var active = (WM_ACTIVATE_WPARAM)Macros.LOWORD(wParam);

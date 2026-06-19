@@ -116,6 +116,8 @@ internal class Program
 
     private static void OnFrame()
     {
+        if(!window.IsWindowInitialized) return;
+
         var now = Stopwatch.GetTimestamp();
         var dt = (float)(now - lastFrame) / Stopwatch.Frequency;
         lastFrame = now;
