@@ -229,6 +229,11 @@ public class ChibiWindow : IDisposable
         int styledWindowWidth = width;
         int styledWindowHeight = height;
 
+        if (flags.HasFlagFast(WindowFlags.Hidden))
+        {
+            WindowVisible = false;
+        }
+
         if (flags.HasFlagFast(WindowFlags.Borderless) && !flags.HasFlagFast(WindowFlags.Fullscreen))
         {
             var rect = new RECT { left = 0, top = 0, right = width, bottom = height };
